@@ -1,0 +1,125 @@
+@import "./mixin";
+.container{
+    width: $container;
+    margin: 0 auto;
+}
+
+@media only screen and (max-width: $container) {
+    .container {
+      width: 100%;
+      padding: 0 10px;
+      box-sizing: border-box;
+    }
+  }
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+.sec-name-text{
+    @include font-style (20px, 400, 30px, #1379FF);
+    text-transform: capitalize;
+    margin-bottom: 6px;
+}
+
+.sec-heading-text{
+    @include font-style(50px, 600, 76px, #42495B);
+    text-transform: capitalize;
+}
+
+.sec-desc-text{
+    @include font-style(16px, 300, 26px, #7A839E);
+}
+
+.card-desc-text{
+    @include font-style(15px, 300, 22px, #7A839E);
+}
+
+.sec-button{
+    @include font-style(12px, 600, 18px, white);
+    padding: 16px 52px;
+    background-color: #1379FF;
+    border-radius: 50px;
+    text-decoration: none;
+    display: inline-block;
+    text-transform: uppercase;
+}
+
+.cart-button{
+    @extend .sec-button;
+    padding: 6px 18px;
+    position: absolute;
+    right: 20px;
+    bottom: 25px;
+}
+
+.service-name{
+    @include font-style(18px, 600, 27px, #42495B);
+    text-transform: uppercase;
+    margin-bottom: 38px;
+}
+
+.pricing-title{
+    @include font-style(28px, 400, 42px, #42495B);
+    text-transform: capitalize;
+    margin-bottom: 66px;
+}
+
+.price{
+    @include font-style (30px, 600, 46px, #1379FF);
+    margin-bottom: 40px;
+}
+
+.pricing-button{
+    @include font-style(16px, 400, 25px, #42495B);
+    padding: 15px 40px;
+    background-color: white;
+    border-radius: 50px;
+    text-decoration: none;
+    display: inline-block;
+    text-transform: uppercase;
+    border: 1px solid #1379FF;
+    transition: .2s;
+    &:hover{
+        background-color: #1379FF;
+        color: white;
+    }
+}
+
+a{
+    text-decoration: none;
+}
+
+.active-hamburger{
+    span{
+        position: absolute;
+        margin: 3px;
+        &:first-child{
+            transform: rotate(-40deg);
+        }
+        &:nth-child(2){
+            display: block !important;
+        }
+        &:last-child{
+            transform: rotate(40deg);
+        }
+    }
+    #dis-none-ede-bilemdim{
+        opacity: 0;
+    }
+}
+
+.goToTop{
+    padding: 20px 18px;
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    border-radius: 40px;
+    background-color: purple;
+    display: none;
+    >i{
+        color: white;
+        font-size: 20px;
+        display: inline-block;
+    }
+}
