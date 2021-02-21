@@ -1,0 +1,30 @@
+#biography{
+    padding: 200px 0;
+    display: flex;
+    flex-wrap: wrap;
+    #bio-photo{
+        width: 50%;
+        @media only screen and (max-width: 850px) {
+            width: 100%;
+            margin-bottom: 50px;
+            padding: 0 40px;
+        }
+        padding-right: 60px;
+        box-sizing: border-box;
+        >img{
+            width: 100%;
+        }
+    }
+    #bio-details{
+        @media only screen and (max-width: 850px) {
+            width: 100%;
+            padding: 0 50px;
+        }
+        width: 50%;
+        padding-right: 150px;
+        box-sizing: border-box;
+        .sec-desc-text{
+            margin-bottom: 32px;
+        }
+    }
+}
